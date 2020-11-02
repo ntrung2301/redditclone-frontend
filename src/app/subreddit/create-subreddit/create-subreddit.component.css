@@ -1,0 +1,21 @@
+.create-subreddit-buttons{
+    padding: 5px;
+}
+
+.btnSubredditCreate{
+    margin: 5px;
+}
+
+.btnSubredditCancel {
+    margin: 5px;
+}
+
+.create-subreddit-background {
+    background-image: url(https://redditblog.com/wp-content/uploads/2019/07/image4.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    border-radius: 3px 3px 0 0;
+    background-color: blue;
+    height: 100%;
+}

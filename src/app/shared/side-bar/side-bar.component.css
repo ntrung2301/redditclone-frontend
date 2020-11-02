@@ -1,0 +1,61 @@
+.sidebar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgb(255,255,255,0.8);
+    color: #878A8C;
+    position: relative;
+    --post-line-color: #ccc;    
+}
+
+.sidebar-background {
+    background-image: url(https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    border-radius: 3px 3px 0 0;
+    background-color: blue;
+    height: 40px;
+}
+
+.sidebar-icon {
+    position: relative;
+    height: 68px;
+    width: 40px;
+    margin-left: 5px;
+    background-size: 40px 68px;
+    display: inline-block;
+    background-image: url(https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png);
+}
+
+.sidebar-title{
+    margin: -23px 20px 10px 20px;
+}
+
+.sidebar-title-text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 4px;
+    color: black;
+}
+
+.btnCreatePost {
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.btnCreateSubreddit {
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    width: 100%;
+    color: cornflowerblue;
+    background-color: #c5c7c9;
+    font-weight: 600;
+}
+

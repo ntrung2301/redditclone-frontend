@@ -1,0 +1,28 @@
+<div class="create-subreddit-section">
+    <div class="row justify-content-center">
+            <div class="create-subreddit container">
+                <div class="create-subreddit-heading" style="font-weight: bold;">Create a subreddit </div>
+                <hr />
+    
+                <form [formGroup]="createSubredditForm" (ngSubmit)="createSubreddit()">
+                    <div class="form-group row">
+                        <input type="text" [formControlName]="'title'" class="form-control" id="title" name="title" placeholder="COMMUNITY NAME" style="margin-top: 5px;" required autofocus>
+                        <span style="font-weight:lighter; font-size: small;">Community names including capitalization cannot be changed. </span>
+                    </div>
+                    <div class="form-group row">
+                        <textarea type="text" [formControlName]="'description'" class="form-control" id="description" name="description" placeholder="COMMUNITY DESCRIPTION" style="margin-top: 5px;" required autofocus></textarea>
+                        <span style="font-weight:lighter; font-size: small;">This is how new members come to understand your community. </span>
+                    </div>
+                </form>
+    
+                <div class="create-subreddit-buttons d-flex flex-row-reverse">
+                    <div class="btnSubredditCreate">
+                        <a type="submit" class="btn btn-primary btn-sm" style="text-transform: uppercase;">start</a>
+                    </div>
+                    <div class="btnSubredditCancel">
+                        <a (click)="discard()" class="btn btn-light btn-sm" style="text-transform: uppercase;">cancel</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

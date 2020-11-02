@@ -1,0 +1,25 @@
+<div class="row post" *ngFor="let post of posts$">
+    <app-vote-button [post]="post"></app-vote-button>
+    <div class="col-md-8">
+            <div class="post-title">
+                <a class="postname" href="{{post.url}}">{{post.postName}}</a>
+            </div>
+            <span class="subreddit-info">
+                <span class="subreddit-text"><a class="posturl" routerLink="">{{post.subredditName}}</a></span>
+                <span> . Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span>
+                <span> . {{post.duration}}</span>
+            </span>
+    </div>
+    <div class="col-md-1">
+            <a class="btnComments" role="button">
+            <fa-icon [icon]="faComments"></fa-icon>
+            {{post.commentCount}}
+            </a>
+    </div>
+
+    <div class="col-sm-1">
+        <button class="login" (click)="goToPost(post.id)">
+         Read
+        </button>
+    </div>
+</div>
