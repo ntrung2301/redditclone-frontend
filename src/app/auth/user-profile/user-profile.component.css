@@ -1,0 +1,33 @@
+.profile-header {
+    background-size: cover;
+    border-radius: 3px 3px 0 0;
+    background-image: radial-gradient( circle 465px at -15.1% -25%,  rgba(17,130,193,1) 0%, rgba(67,166,238,1) 49%, rgba(126,203,244,1) 90.2% );;
+    height: 60px;
+}
+
+.profile-body {
+    margin: -23px 15px 10px 20px;
+}
+
+.profile-username {
+    font-size: small;
+    color:  #878A8C;
+}
+
+.profile-icon {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 100px; 
+    height: 100px;
+}
+
+.btnCreatePost {
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-sidebar {
+    background-color: #ffffff;
+}

@@ -6,6 +6,7 @@ input.ng-invalid.ng-touched {
 body {
     margin-top: 100px;
     height: 100%;
+    background-color: #DAE0E6;
 }
 
 html {

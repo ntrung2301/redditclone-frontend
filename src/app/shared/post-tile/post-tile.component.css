@@ -1,18 +1,15 @@
 .post {
     border: 1px solid #cccccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
     overflow: hidden;
     background-color: rgb(255,255,255,0.8);
     color: #878A8C;
     position: relative;
-    border-radius: 4px;
-    padding: 10px;
+    border-radius: 1px;
+    font-size: small;
 }
 
 .post:hover{
-    border: 1px solid black;
+    border: 0.25px solid #495f69;
 }
 
 .btnComments {
@@ -29,19 +26,17 @@
     text-decoration: none;
 }
 
-.post-title {
-    font-size: 15px;
-    font-weight: bold;
+.post-title, .posturl, .postname {
     opacity: 1;
     color: black;
     text-decoration: none;
-}
-
-.posturl, .postname {
-    color: black;
+    
 }
 
 .subreddit-text {
     font-weight: bold;
 }
 
+.post-content {
+    background-color: #ffffff;
+}

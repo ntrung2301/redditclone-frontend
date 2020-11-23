@@ -1,1 +1,45 @@
-<p>create-post works!</p>
+<div class="create-post-section">
+    <div class="container">
+        <div class="row">
+            <hr />           
+            <div class="create-post-container container">
+                <form [formGroup]="createPostForm" (ngSubmit)="createPost()">
+                    <div class="form-group">
+                        <div class="create-post-heading" style="font-weight: bold;"> Create a post </div>
+                        <hr />
+                        <select class="form-control" style="margin-top:10px; width: 300px;" [formControlName]="'subredditName'">
+                            <option value="" selected disabled>Search Subreddit</option>
+                            <option *ngFor="let subreddit of subreddits">{{subreddit.name}}</option>
+                        </select>
+                        <input type="text" [formControlName]="'postName'" class="form-control" placeholder="Title" style="margin-top: 10px;" required autofocus>
+                        <input type="text" [formControlName]="'url'" class="form-control" style="margin-top: 10px;" placeholder="URL" required autofocus>
+                        <editor style="margin-top: 10px;"
+                        [formControlName]="'description'" [init]="{
+                          height: 500,
+                          menubar: false,
+                          plugins: [
+                            'advlist autolink lists link image charmap print preview anchor',
+                            'searchreplace visualblocks code fullscreen',
+                            'insertdatetime media table paste code help wordcount'
+                          ],
+                          toolbar:
+                            'undo redo | formatselect | bold italic backcolor | \
+                            alignleft aligncenter alignright alignjustify | \
+                            bullist numlist outdent indent | removeformat | help'
+                        }"
+                      ></editor>
+                        
+                      <div class="create-posts-buttons d-flex flex-row-reverse">
+                        <div class="btnPostCreate">
+                            <a (click)="createPost()" class="btn btn-primary btn-sm" style="text-transform: uppercase;">Post</a>
+                        </div>
+                        <div class="btnPostCancel">
+                            <a (click)="discard()" class="btn btn-light btn-sm" style="text-transform: uppercase;">Cancel</a>
+                        </div>
+                    </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

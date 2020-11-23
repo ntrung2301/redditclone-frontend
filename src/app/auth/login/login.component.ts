@@ -46,7 +46,9 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
         if(data) {
           this.isError = false;
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/').then(() => {
+            window.location.reload();
+          });
           this.toastr.success('Login Successful');
         } else {
           this.isError = true;

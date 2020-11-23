@@ -1,25 +1,41 @@
-<div class="row post" *ngFor="let post of posts$">
-    <app-vote-button [post]="post"></app-vote-button>
-    <div class="col-md-8">
-            <div class="post-title">
-                <a class="postname" href="{{post.url}}">{{post.postName}}</a>
-            </div>
-            <span class="subreddit-info">
-                <span class="subreddit-text"><a class="posturl" routerLink="">{{post.subredditName}}</a></span>
-                <span> . Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span>
-                <span> . {{post.duration}}</span>
-            </span>
-    </div>
-    <div class="col-md-1">
-            <a class="btnComments" role="button">
-            <fa-icon [icon]="faComments"></fa-icon>
-            {{post.commentCount}}
-            </a>
-    </div>
+<div class="container-fluid">
+    <div class="d-flex flex-row post" *ngFor="let post of posts">
+        
+        <div class="p-1 vote-box">
+            <app-vote-button [post]="post"></app-vote-button>
+        </div>
 
-    <div class="col-sm-1">
-        <button class="login" (click)="goToPost(post.id)">
-         Read
-        </button>
-    </div>
-</div>
+        <div class="p-0 flex-grow-1 post-content" (click)="goToPost(post.id)" >   
+            <div class="d-flex flex-row" >
+                <div class="p-1 w-100 d-flex flex-column">
+                    <div class="p-0">
+                        <div class="post-title ">
+                            <span class="postname">{{post.postName}}</span>
+                        </div>
+                    </div>
+                        
+                    <div class="p-0">
+                        <span class="subreddit-info">
+                            <span class="subreddit-text"><a class="posturl" routerLink="">r/{{post.subredditName}}</a></span>
+                            <span> . Posted by <a class="username" routerLink="/user/{{post.username}}">{{post.username}}</a></span>
+                            <span> . {{post.duration}}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-1 d-flex flex-row" style="margin-right: 20px;">
+                    <div class="p-0">
+                        <a class="btnComments" role="button">
+                            <fa-icon [icon]="faComments"></fa-icon>
+                            {{post.commentCount}}
+                        </a>
+                    </div>
+                    <div class="p-0">
+                        <i><fa-icon [icon]="faEllipsish"></fa-icon></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+</div>      
+

@@ -14,15 +14,15 @@
                         <span style="font-weight:lighter; font-size: small;">This is how new members come to understand your community. </span>
                     </div>
                 </form>
-    
+
                 <div class="create-subreddit-buttons d-flex flex-row-reverse">
                     <div class="btnSubredditCreate">
-                        <a type="submit" class="btn btn-primary btn-sm" style="text-transform: uppercase;">start</a>
+                        <a (click)="createSubreddit()" class="btn btn-primary btn-sm" style="text-transform: uppercase;">start</a>
                     </div>
                     <div class="btnSubredditCancel">
                         <a (click)="discard()" class="btn btn-light btn-sm" style="text-transform: uppercase;">cancel</a>
                     </div>
-                </div>
+                </div>        
             </div>
     </div>
 </div>

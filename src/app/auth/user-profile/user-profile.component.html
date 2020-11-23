@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-md-8">
+            <app-profile-post-tile [posts]="posts"></app-profile-post-tile>
+        </div>
+
+        <div class="col-md-4">
+            <div class="profile-sidebar">
+                <div class="profile-header"></div>
+                <div class="profile-body">
+                    <img class="profile-icon" src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+                    <br>
+                    <div class="profile-username col-md-6">u/{{username}}</div>
+                    <div class="d-flex justify-content-center flex-row">
+                        <div class="p-1 flex-fill" style="text-align: center;" >
+                            <span style="font-weight: 500;">Cake day</span>
+                            <br>
+                            <span>20-11</span>
+                        </div>
+
+                        <div class="p-1 flex-fill" style="text-align: center;">
+                            <span style="font-weight: 500;">You have posted</span>
+                            <br>
+                            <span>{{postLength}} posts</span>
+                        </div>
+                    </div> 
+                    <div class="create-post-button">
+                        <button class="btnCreatePost btn btn-primary btn-sm" (click)="goToCreatePost()">Create Post</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
